@@ -36,6 +36,7 @@ services:
       SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
       SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+
     networks:
       - app-network
 
@@ -46,13 +47,16 @@ services:
     container_name: distortedrealities-frontend
     restart: unless-stopped
     environment:
-      REACT_APP_BACKEND_URL: http://localhost:${BACKEND_PORT}
+      REACT_APP_BACKEND_URL: ${REACT_APP_BACKEND_URL_DOCKER}
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
     ports:
       - "${FRONTEND_PORT}:3000"
     networks:
       - app-network
     volumes:
-      - ./frontend:/app/src
+      - ./frontend:/app
+      - /app/node_modules
 
 volumes:
   mysql_data:
