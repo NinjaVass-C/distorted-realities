@@ -9,7 +9,7 @@ COPY package*.json ./
 
 # Install dependencies and fix rollup issue in container
 RUN npm install
-
+RUN npm install @rollup/rollup-linux-x64-gnu --save-optional
 # Copy the rest of the source
 COPY . .
 
