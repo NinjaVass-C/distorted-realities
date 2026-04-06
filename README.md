@@ -34,11 +34,7 @@ TBD
 - Create front-end; integrate front-end testing where applicable (potentially using Playwright).  
 - Once project is created, integrate tests into CI/CD pipeline; deploy everything to server.  
 
-## Timeframe for Project
-Ideally done before April 2026 prior to graduation; goal to shoot for is ~3 months.
-
 ## Collaboration
 Development on the MVP will be limited to myself; however, for future enhancements, potentially design some user stories and add feature requests through GitHub.  
-Use SLC Discord server to help others with contributing to open-source projects, give myself some senior-developer experience with mentoring/code reviews.  
 Practicing proper PRs and MRs will be done throughout the project, ensuring if others do work in the codebase, they can easily navigate through history and understand why things are done.  
 Documentation will be considered depending on scale.
